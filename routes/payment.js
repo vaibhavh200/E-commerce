@@ -41,8 +41,8 @@ router.post('/user/checkout', isLoggedIn, async (req, res) => {
                 quantity: 1,
             })),
             mode: 'payment',
-            success_url: 'http://localhost:8080/user/cart/success', // Redirect after success
-            cancel_url: 'http://localhost:8080/user/cart/cancel',  // Redirect after cancel
+            success_url: 'https://e-commerce-ax5u.onrender.com/user/cart/success', // Redirect after success
+            cancel_url: 'https://e-commerce-ax5u.onrender.com/user/cart/cancel',  // Redirect after cancel
         });
 
         // Redirect to Stripe checkout
@@ -169,8 +169,8 @@ router.post('/products/:productId/buy', isLoggedIn ,async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `http://localhost:8080/products/${productId}/success`, // Redirect after success
-            cancel_url: `http://localhost:8080/products/${productId}/cancel`,  // Redirect after cancel
+            success_url: `https://e-commerce-ax5u.onrender.com/products/${productId}/success`, // Redirect after success
+            cancel_url: `https://e-commerce-ax5u.onrender.com/products/${productId}/cancel`,  // Redirect after cancel
         });
 
         // Redirect to Stripe Checkout
